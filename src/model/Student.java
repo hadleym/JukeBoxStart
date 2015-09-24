@@ -1,3 +1,4 @@
+package model;
 
 public class Student {
 	private String id;
@@ -10,15 +11,6 @@ public class Student {
 		password = iniPassword;
 		seconds = 0;
 		songsPlayed = 0;
-	}
-	
-	public boolean auth(String refId, int refPassword) {
-		if (refId == id && refPassword == password) {
-			return true;
-		}
-		else {
-			return false;
-		}
 	}
 
 	// Just check whether student can play, if song can be played will be checked in Song.java; both called by JukeBox or PlayList
@@ -39,5 +31,17 @@ public class Student {
 	//sets songs played to zero
 	public void reset(){
 		songsPlayed=0;
+	}
+
+	public String getNumOfPlay() {
+		return seconds + "  " + songsPlayed; 
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public int getPassword() {
+		return password;
 	}
 }
