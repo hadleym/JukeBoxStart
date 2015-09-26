@@ -33,5 +33,47 @@ public class testJukeBox {
 		assertEquals(1,s.getPassword());
 	}
 	
+	@Test
+	public void TestSongAndPlayList(){
+		Song s1 = new Song("spacemusic.au", 6, "microsoft", "spacemusic.au");
+		assertTrue(s1.canBePlayed());
+		assertEquals("microsoft",s1.getArtist());
+		assertEquals("spacemusic.au",s1.getPath());
+		assertEquals("spacemusic.au",s1.getName());
+		assertEquals(6,s1.getLength());
+		s1.play();
+		assertTrue(s1.canBePlayed());
+		s1.play();
+		assertTrue(s1.canBePlayed());
+		s1.play();
+		assertTrue(!s1.canBePlayed());
+		assertEquals(3,s1.getTimesPlayed());
+		s1.reset();
+		assertEquals(0,s1.getTimesPlayed());
+		assertTrue(s1.canBePlayed());
+		
+	}
+	
+	@Test
+	public void TestPlayList(){
+		PlayList pl = new PlayList();
+		Song s1 = new Song("spacemusic.au", 6, "microsoft", "spacemusic.au");
+		pl.addSong(s1);
+		assertEquals(1, pl.getSize());
+	}
+	
+	@Test
+	public void TestJukeBox(){
+		JukeBox jb = new JukeBox();
+		Song s1 = new Song("flute.aif", 5, "a","flute.aif");
+		try{
+			jb.addSong("Devon", 22, s1);
+		} catch (Exception e) {
+			
+		}
+		jb.reset();
+		
+		
+	}
 	
 }

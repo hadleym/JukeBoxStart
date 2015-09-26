@@ -45,10 +45,6 @@ public class Song {
 		return artist;
 	}
 	
-	public int getLengthInSeconds(){
-		return seconds;
-	}
-	
 	public int getTimesPlayed(){
 		return timesPlayed;
 	}

@@ -31,14 +31,13 @@ public class PlayList {
 		
 	}
 	
-	public void play(){
-		this.playNextSong();
-	}
-	public void playSong(){
-		//play a song if there are songs to play
-	}
+//	public void play(){
+//		this.playNextSong();
+//	}
+//	public void playSong(){
+//		//play a song if there are songs to play
+//	}
 	private class OurEndOfSongListener implements EndOfSongListener{
-
 		@Override
 		public void songFinishedPlaying(EndOfSongEvent eventWithFileNameAndDateFinished) {
 			playNextSong();
