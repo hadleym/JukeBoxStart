@@ -33,8 +33,11 @@ public class Student {
 		songsPlayed=0;
 	}
 
-	public String getNumOfPlay() {
-		return seconds + "  " + songsPlayed; 
+	public int getSeconds(){
+		return seconds;
+	}
+	public int getNumOfPlay() {
+		return songsPlayed; 
 	}
 
 	public String getId() {
