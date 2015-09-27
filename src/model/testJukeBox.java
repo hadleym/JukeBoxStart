@@ -1,5 +1,7 @@
 package model;
+//Author Mingchen Dai, Mark Hadley
 
+// test methods for the model package
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -34,7 +36,7 @@ public class testJukeBox {
 	}
 	
 	@Test
-	public void TestSongAndPlayList(){
+	public void TestSong(){
 		Song s1 = new Song("spacemusic.au", 6, "microsoft", "spacemusic.au");
 		assertTrue(s1.canBePlayed());
 		assertEquals("microsoft",s1.getArtist());
@@ -52,11 +54,13 @@ public class testJukeBox {
 		assertEquals(0,s1.getTimesPlayed());
 		assertTrue(s1.canBePlayed());
 		
+		
 	}
 	
 	@Test
 	public void TestPlayList(){
 		PlayList pl = new PlayList();
+		pl.playNextSong();
 		Song s1 = new Song("spacemusic.au", 6, "microsoft", "spacemusic.au");
 		pl.addSong(s1);
 		assertEquals(1, pl.getSize());
@@ -72,6 +76,7 @@ public class testJukeBox {
 			
 		}
 		jb.reset();
+		
 		
 		
 	}
