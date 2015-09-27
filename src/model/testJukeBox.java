@@ -69,13 +69,16 @@ public class testJukeBox {
 	@Test
 	public void TestJukeBox(){
 		JukeBox jb = new JukeBox();
-		Song s1 = new Song("flute.aif", 5, "a","flute.aif");
+		Song s1 = jb.getSong("Tada");
+		assertTrue(s1.canBePlayed());
 		try{
 			jb.addSong("Devon", 22, s1);
 		} catch (Exception e) {
 			
 		}
+		assertEquals(1, jb.getSong("Tada").getTimesPlayed());
 		jb.reset();
+		assertEquals(0, jb.getSong("Tada").getTimesPlayed());
 		
 		
 		

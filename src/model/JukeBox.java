@@ -13,7 +13,9 @@ public class JukeBox {
 	ArrayList<Song> songs;
 	public PlayList playList;
 	static LocalDate lastPlay;
-
+	public static String baseDir = System.getProperty("user.dir") + System.getProperty("file.separator") + "songfiles"
+			+ System.getProperty("file.separator");
+	
 	public JukeBox() {
 		songs = new ArrayList<Song>(); // all of the possible songs
 		playList = new PlayList();
@@ -23,6 +25,11 @@ public class JukeBox {
 		students.add(new Student("Devon", 22));
 		students.add(new Student("River", 333));
 		students.add(new Student("Ryan", 4444));
+		songs.add(new Song("Space Music", 6, "microsoft", baseDir+"spacemusic.au"));
+		songs.add(new Song("Blue RidgeMountain Mist", 38, "a", baseDir+"BlueRidgeMountainMist.mp3"));
+		songs.add(new Song("Determined Tumbao", 20, "b",  baseDir+"DeterminedTumbao.mp3"));
+		songs.add(new Song("Tada", 2, "microsoft", baseDir + "tada.wav"));
+		songs.add(new Song("Untameable Fire", 282, "Pierre Langer", baseDir + "UntamableFire.mp3"));
 	}
 
 	// sets all songs to zero times played by the Jukebox and all songs played
@@ -72,5 +79,14 @@ public class JukeBox {
 		} else {
 			return false;
 		}
+	}
+	
+	public Song getSong(String name){
+		for (int i = 0; i < songs.size(); i++){
+			if (name.equals(songs.get(i).getName()))
+				return songs.get(i);
+			
+		}
+		return null;
 	}
 }
