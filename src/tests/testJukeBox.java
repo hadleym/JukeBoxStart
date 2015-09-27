@@ -1,10 +1,15 @@
-package model;
+package tests;
 //Author Mingchen Dai, Mark Hadley
 
 // test methods for the model package
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import model.JukeBox;
+import model.PlayList;
+import model.Song;
+import model.Student;
 
 public class testJukeBox {
 

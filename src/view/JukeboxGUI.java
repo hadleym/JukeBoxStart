@@ -54,13 +54,13 @@ class songList implements TableModel {
 			      + System.getProperty("file.separator");
 	  
 	  public songList() {  
-	    data.add(new Song("BlueRidgeMountainMist", 38, "a", baseDir+"BlueRidgeMountainMist.mp3"));
-	    data.add(new Song("DeterminedTumbao", 38, "b", baseDir+"DeterminedTumbao.mp3"));
-	    data.add(new Song("flute", 5, "flute", baseDir+"flute.aif"));
-	    data.add(new Song("spacemusic", 6, "microsoft", baseDir+"spacemusic.au"));
-	    data.add(new Song("SwingCheese", 38, "c", baseDir+"SwingCheese.mp3"));
-	    data.add(new Song("tada",5, "tada", baseDir+"tada.wav"));
-	    data.add(new Song("UntameableFire", 38, "d", baseDir+"UntameableFire.mp3"));
+	    data.add(new Song("Space Music", 6, "Unknown", baseDir+"spacemusic.au"));
+	    data.add(new Song("Blue Ridge Mountain Mist", 38, "Ralph Schuckett", baseDir+"BlueRidgeMountainMist.mp3"));
+	    data.add(new Song("Determined Tumbao", 20, "FreePlay Music",  baseDir+"DeterminedTumbao.mp3"));
+	    data.add(new Song("Tada", 2, "Microsoft", baseDir + "tada.wav"));
+	    data.add(new Song("Untameable Fire", 282, "Pierre Langer", baseDir + "UntamableFire.mp3"));
+	    data.add(new Song("Swing Cheese", 15, "FreePlay Music", baseDir + "UntamableFire.mp3"));
+	    data.add(new Song("Flute", 5, "Sun Microsystems", baseDir + "flute.aif"));
 	  }
 
 	public Song getSong(String name) {
