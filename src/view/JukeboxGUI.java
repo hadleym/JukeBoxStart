@@ -1,4 +1,6 @@
 package view;
+//Author Mingchen Dai, Mark Hadley
+
 import java.awt.event.MouseAdapter;
 import java.text.NumberFormat;
 import java.util.ArrayList;
