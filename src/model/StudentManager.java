@@ -103,7 +103,7 @@ public class StudentManager {
 		if (currentStudent != null){
 			return currentStudent.getId();
 		} else {
-			return "No User Logged In";
+			return null;
 		}
 	}
 
